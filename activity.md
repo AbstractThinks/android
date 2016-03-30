@@ -22,10 +22,10 @@ public class Activity extends ApplicationContext {
 </pre>
 
 <ul>
-  <li>打开应用时先后执行了onCreate()->onStart()->onResume()三个方法</li>
-  <li>按BACK键时，这个应用程序将结束，应用将先后调用onPause()->onStop()->onDestory()三个方法</li>
-  <li>按HOME键时，Activity先后执行了onPause()->onStop()这两个方法</li>
-  <li>再次重新打开应用时，Activity先后执行了onRestart()->onStart()->onResume()这三个方法</li>
+  <li>打开应用时先后执行了<b>onCreate()->onStart()->onResume()</b>三个方法</li>
+  <li>按BACK键时，这个应用程序将结束，应用将先后调用<b>onPause()->onStop()->onDestory()</b>三个方法</li>
+  <li>按HOME键时，Activity先后执行了<b>onPause()->onStop()</b>这两个方法</li>
+  <li>再次重新打开应用时，Activity先后执行了<b>onRestart()->onStart()->onResume()</b>这三个方法</li>
 </ul>
 
 例：
