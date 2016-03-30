@@ -22,7 +22,8 @@ public class Activity extends ApplicationContext {
                 //在 Activity 从 Pause 状态转换到 Active 状态时被调用
         };       
         protected void onPause(){
-                //Paused 当 Activity 被另一个透明或者 Dialog 样式的 Activity                  覆盖时的状态。此时它依然与窗口管理器保持连接，系统继续维护其内部状态，
+                //Paused 当 Activity 被另一个透明或者 Dialog 样式的 Activity                  
+                覆盖时的状态。此时它依然与窗口管理器保持连接，系统继续维护其内部状态，
                 所以它仍然可见，但它已经失去了焦点故不可与用户交互。
         };        
         protected void onStop(){
