@@ -11,12 +11,23 @@
 Activity其实是继承了ApplicationContext这个类，我们可以重写以下方法
 <pre>
 public class Activity extends ApplicationContext {
-        protected void onCreate(Bundle savedInstanceState){};        
-        protected void onStart(){};           
+        protected void onCreate(Bundle savedInstanceState){
+          //onCreate()被调用时，Activity还不可见
+        };        
+        protected void onStart(){
+          //onStart() 被调用时，Activity可能是可见了，但还不是可交互的
+        };           
         protected void onRestart(){};        
-        protected void onResume(){};       
-        protected void onPause(){};        
-        protected void onStop(){};        
+        protected void onResume(){
+                //在 Activity 从 Pause 状态转换到 Active 状态时被调用
+        };       
+        protected void onPause(){
+                //Paused 当 Activity 被另一个透明或者 Dialog 样式的 Activity                  覆盖时的状态。此时它依然与窗口管理器保持连接，系统继续维护其内部状态，
+                所以它仍然可见，但它已经失去了焦点故不可与用户交互。
+        };        
+        protected void onStop(){
+                //当 Activity 被另外一个 Activity 覆盖、失去焦点并不可见时处于 Stoped 状态
+        };        
         protected void onDestroy(){};
 }
 </pre>
